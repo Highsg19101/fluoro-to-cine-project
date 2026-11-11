@@ -139,6 +139,26 @@
         text-align: center;
       }
 
+      .degradation-figure {
+        width: calc(100% - 30px);
+        max-width: 1048px;
+        margin: 0 auto 64px;
+      }
+
+      .degradation-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .degradation-figure figcaption {
+        margin-top: 16px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+      }
+
       @media (max-width: 639px) {
         .project-demos {
           grid-template-columns: 1fr;
@@ -231,6 +251,15 @@
           <figcaption id="phase-2-caption">Phase 2- Restoration</figcaption>
         </figure>
       </section>
+      <figure class="degradation-figure">
+        <a href="assets/images/degradation-grid-from-original-cine-kvp-plus10-mas-minus2.png" target="_blank" rel="noopener">
+          <img src="assets/images/degradation-grid-from-original-cine-kvp-plus10-mas-minus2.png"
+            width="2200" height="2280" loading="lazy" decoding="async"
+            alt="Original cine frame and eight synthetic fluoroscopy settings arranged in a three-by-three grid. Open the full-resolution image."
+            aria-describedby="degradation-caption">
+        </a>
+        <figcaption id="degradation-caption">Controllable degradation of a cine frame by target tube voltage and exposure. The original cine frame (bottom right; 76.14 kVp, 4.23 mAs/frame) is converted to synthetic fluoroscopy at eight target settings. Each step up lowers the mAs by 2 at a fixed kVp, and each step left raises the kVp by 10 at a fixed mAs. Noise is strongest at the lowest dose (top right) and weakens as the kVp or mAs increases, while the mean brightness is preserved. All panels show the same frame in the same grey window (0–255)</figcaption>
+      </figure>
     </main>
   </body>
 </html>
