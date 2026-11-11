@@ -110,6 +110,19 @@
         outline-offset: 4px;
       }
 
+      .project-demo {
+        width: calc(100% - 30px);
+        max-width: 512px;
+        margin: 0 auto 48px;
+      }
+
+      .demo-video {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: #000;
+      }
+
       @media (max-width: 991px) {
         .project-header {
           max-width: 728px;
@@ -172,6 +185,15 @@
           </p>
         </section>
       </header>
+      <figure class="project-demo">
+        <video class="demo-video" controls loop playsinline preload="metadata"
+          width="512" height="512" poster="assets/videos/cine-vs-synthetic-fluoro-poster.jpg"
+          aria-label="Cine and synthetic fluoroscopy comparison">
+          <source src="assets/videos/cine-vs-synthetic-fluoro.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+          <a href="assets/videos/cine-vs-synthetic-fluoro.mp4">Download the comparison video</a>.
+        </video>
+      </figure>
     </main>
   </body>
 </html>
