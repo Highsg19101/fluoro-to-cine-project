@@ -6,7 +6,7 @@
     <title>Fluoroscopy to Cine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&amp;display=swap" rel="stylesheet">
     <style>
       * {
         box-sizing: border-box;
@@ -48,6 +48,80 @@
 
       .nowrap {
         white-space: nowrap;
+      }
+
+      .author-divider {
+        max-width: 820px;
+        margin: 28px auto;
+        border: 0;
+        border-top: 1px solid #d6d6d6;
+      }
+
+      .team-details {
+        color: #000;
+      }
+
+      .team-name {
+        margin: 0 0 12px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-wrap: balance;
+      }
+
+      .team-details sup {
+        font-size: 0.7em;
+        line-height: 0;
+      }
+
+      .team-affiliations {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 1.7;
+        text-wrap: balance;
+      }
+
+      .team-affiliations p {
+        margin: 0;
+      }
+
+      .contributors {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 40px;
+        max-width: 820px;
+        margin: 0 auto;
+        color: #000;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .contributor p {
+        margin: 0;
+      }
+
+      .contributor a {
+        color: #3d737f;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        overflow-wrap: anywhere;
+      }
+
+      .contributor a:hover {
+        color: #234852;
+      }
+
+      .contributor a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 600px) {
+        .contributors {
+          grid-template-columns: 1fr;
+          font-size: 17px;
+        }
       }
 
       @media (max-width: 991px) {
@@ -99,6 +173,24 @@
       <header class="project-header">
         <h1 class="project-title">Fluoroscopy to Cine</h1>
         <p class="project-subtitle">Generative Restoration for <span class="nowrap">Low-dose</span> Coronary Angiography</p>
+        <hr class="author-divider">
+        <section class="team-details" aria-labelledby="team-name">
+          <h2 class="team-name" id="team-name">SNUBH Coronary Artery AI Team<sup>1,2</sup></h2>
+          <div class="team-affiliations">
+            <p><sup>1</sup>Cardiovascular Center, Seoul National University Bundang Hospital, Korea</p>
+            <p><sup>2</sup>Seoul National University, Korea</p>
+          </div>
+          <div class="contributors">
+            <div class="contributor">
+              <p>First author: <strong>Sang-Kyun Ko</strong></p>
+              <p><a href="mailto:highsg19101@gmail.com">highsg19101@gmail.com</a></p>
+            </div>
+            <div class="contributor">
+              <p>Corresponding Author: <strong>Si-Hyuck Kang*</strong></p>
+              <p><a href="mailto:eandp303@gmail.com">eandp303@gmail.com</a></p>
+            </div>
+          </div>
+        </section>
       </header>
     </main>
   </body>
