@@ -110,10 +110,18 @@
         outline-offset: 4px;
       }
 
-      .project-demo {
+      .project-demos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
         width: calc(100% - 30px);
-        max-width: 512px;
+        max-width: 1048px;
         margin: 0 auto 48px;
+      }
+
+      .project-demo {
+        min-width: 0;
+        margin: 0;
       }
 
       .demo-video {
@@ -121,6 +129,22 @@
         width: 100%;
         height: auto;
         background: #000;
+      }
+
+      .project-demo figcaption {
+        margin-top: 12px;
+        color: #000;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      @media (max-width: 639px) {
+        .project-demos {
+          grid-template-columns: 1fr;
+          max-width: 512px;
+          gap: 28px;
+        }
       }
 
       @media (max-width: 991px) {
@@ -185,15 +209,28 @@
           </p>
         </section>
       </header>
-      <figure class="project-demo">
-        <video class="demo-video" autoplay muted loop playsinline preload="auto"
-          width="512" height="512" poster="assets/videos/cine-vs-synthetic-fluoro-poster.jpg"
-          aria-label="Cine and synthetic fluoroscopy comparison">
-          <source src="assets/videos/cine-vs-synthetic-fluoro.mp4" type="video/mp4">
-          Your browser does not support embedded video.
-          <a href="assets/videos/cine-vs-synthetic-fluoro.mp4">Download the comparison video</a>.
-        </video>
-      </figure>
+      <section class="project-demos" aria-label="Project phases">
+        <figure class="project-demo">
+          <video class="demo-video" autoplay muted loop playsinline preload="auto"
+            width="512" height="512" poster="assets/videos/phase-1-degradation-poster.jpg"
+            aria-labelledby="phase-1-caption">
+            <source src="assets/videos/phase-1-degradation.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+            <a href="assets/videos/phase-1-degradation.mp4">Download the degradation video</a>.
+          </video>
+          <figcaption id="phase-1-caption">Phase 1 - Degradation</figcaption>
+        </figure>
+        <figure class="project-demo">
+          <video class="demo-video" autoplay muted loop playsinline preload="auto"
+            width="512" height="512" poster="assets/videos/phase-2-restoration-poster.jpg"
+            aria-labelledby="phase-2-caption">
+            <source src="assets/videos/phase-2-restoration.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+            <a href="assets/videos/phase-2-restoration.mp4">Download the restoration video</a>.
+          </video>
+          <figcaption id="phase-2-caption">Phase 2- Restoration</figcaption>
+        </figure>
+      </section>
     </main>
   </body>
 </html>
