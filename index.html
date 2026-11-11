@@ -75,7 +75,7 @@
       }
 
       .team-affiliations {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         font-size: 16px;
         font-style: italic;
         line-height: 1.7;
@@ -87,41 +87,31 @@
       }
 
       .contributors {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 32px;
         max-width: 820px;
         margin: 0 auto;
         color: #000;
-        font-size: 18px;
-        line-height: 1.65;
+        font-size: 16px;
+        line-height: 1.7;
       }
 
-      .contributor p {
-        margin: 0;
-      }
-
-      .contributor a {
+      .contributor {
         color: #3d737f;
         text-decoration: underline;
         text-underline-offset: 3px;
-        overflow-wrap: anywhere;
+        white-space: nowrap;
       }
 
-      .contributor a:hover {
+      .contributor:hover {
         color: #234852;
       }
 
-      .contributor a:focus-visible {
+      .contributor:focus-visible {
         outline: 2px solid currentColor;
         outline-offset: 4px;
-      }
-
-      @media (max-width: 600px) {
-        .contributors {
-          grid-template-columns: 1fr;
-          font-size: 17px;
-        }
       }
 
       @media (max-width: 991px) {
@@ -180,16 +170,10 @@
             <p><sup>1</sup>Cardiovascular Center, Seoul National University Bundang Hospital, Korea</p>
             <p><sup>2</sup>Seoul National University, Korea</p>
           </div>
-          <div class="contributors">
-            <div class="contributor">
-              <p>First author: <strong>Sang-Kyun Ko</strong></p>
-              <p><a href="mailto:highsg19101@gmail.com">highsg19101@gmail.com</a></p>
-            </div>
-            <div class="contributor">
-              <p>Corresponding Author: <strong>Si-Hyuck Kang*</strong></p>
-              <p><a href="mailto:eandp303@gmail.com">eandp303@gmail.com</a></p>
-            </div>
-          </div>
+          <p class="contributors">
+            <a class="contributor" href="mailto:highsg19101@gmail.com"><strong>Sang-Kyun Ko</strong></a>
+            <a class="contributor" href="mailto:eandp303@gmail.com"><strong>Si-Hyuck Kang*</strong></a>
+          </p>
         </section>
       </header>
     </main>
